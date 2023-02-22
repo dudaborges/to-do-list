@@ -7,6 +7,7 @@ function App() {
 
   const initialState = JSON.parse(localStorage.getItem("todos")) || []
   const [input, setInput] = useState('')
+  const [inputTest, setInputTest] = useState('')
   const [todos, setTodos] = useState(initialState)
   const [edit, setEdit] = useState(null)
 
@@ -24,6 +25,8 @@ function App() {
       setTodos={setTodos}
       edit={edit}
       setEdit={setEdit}
+      inputTest={inputTest}
+      setInputTest={setInputTest}
       />
       <TodoList 
       todos={todos} 

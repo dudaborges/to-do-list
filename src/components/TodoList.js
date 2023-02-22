@@ -18,6 +18,7 @@ const TodoList = ({todos, setTodos, setEdit}) => {
         {todos.map((todo) => {
             return(
                 <li key={todo.id}>
+                    <input type="text" value={todo.test} onChange={(e) => e.preventDefault()} />
                     <input type="text" value={todo.title} onChange={(e) => e.preventDefault()} />
                     <button onClick={() => handleEdit(todo)}>Editar</button>
                     <button onClick={() => handleDelete(todo)}>Deletar</button>
